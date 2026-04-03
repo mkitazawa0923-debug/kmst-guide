@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>実績報告完了までの流れ</title>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;700&family=DM+Sans:wght@400;600&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --primary: #1a5cff;
+    --primary-light: #e8eeff;
+    --accent: #00b67a;
+    --accent-light: #e0f7ef;
+    --warning: #f59e0b;
+    --warning-light: #fffbeb;
+    --text: #1a1f36;
+    --text-sub: #5a6480;
+    --border: #dde1f0;
+    --bg: #f5f7ff;
+    --white: #ffffff;
+    --shadow: 0 2px 16px rgba(26,92,255,0.08);
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Noto Sans JP', sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    padding: 40px 20px 60px;
+  }
+
+  .page {
+    max-width: 680px;
+    margin: 0 auto;
+  }
+
+  header {
+    text-align: center;
+    margin-bottom: 40px;
+  }
+
+  header .badge {
+    display: inline-block;
+    background: var(--primary);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    padding: 4px 14px;
+    border-radius: 20px;
+    margin-bottom: 12px;
+    text-transform: uppercase;
+  }
+
+  header h1 {
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--text);
+    line-height: 1.4;
+  }
+
+  header p {
+    margin-top: 8px;
+    font-size: 13px;
+    color: var(--text-sub);
+  }
+
+  /* ステップカード */
+  .step {
+    display: flex;
+    gap: 16px;
+    align-items: flex-start;
+    margin-bottom: 0;
+    position: relative;
+  }
+
+  /* 縦線 */
+  .step-line-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .step-circle {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: var(--primary);
+    color: #fff;
+    font-size: 15px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(26,92,255,0.25);
+    flex-shrink: 0;
+    font-family: 'DM Sans', sans-serif;
+    position: relative;
+    z-index: 1;
+  }
+
+  .step-circle.accent {
+    background: var(--accent);
+    box-shadow: 0 4px 12px rgba(0,182,122,0.25);
+  }
+
+  .connector {
+    width: 2px;
+    flex: 1;
+    min-height: 28px;
+    background: linear-gradient(to bottom, var(--primary), var(--border));
+    margin: 4px 0;
+  }
+
+  .connector.last {
+    background: linear-gradient(to bottom, var(--border), transparent);
+  }
+
+  .step-body {
+    flex: 1;
+    padding-bottom: 28px;
+  }
+
+  .step-card {
+    background: var(--white);
+    border: 1.5px solid var(--border);
+    border-radius: 14px;
+    padding: 16px 20px;
+    box-shadow: var(--shadow);
+    transition: transform 0.2s, box-shadow 0.2s;
+  }
+
+  .step-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 24px rgba(26,92,255,0.12);
+  }
+
+  .step-card.highlight {
+    border-color: var(--primary);
+    background: var(--primary-light);
+  }
+
+  .step-card.accent-card {
+    border-color: var(--accent);
+    background: var(--accent-light);
+  }
+
+  .step-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--text);
+    margin-bottom: 4px;
+    line-height: 1.4;
+  }
+
+  .step-note {
+    font-size: 12px;
+    color: var(--text-sub);
+    margin-bottom: 10px;
+    line-height: 1.6;
+  }
+
+  /* 書類チェックリスト */
+  .checklist {
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .check-item {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 10px;
+    padding: 10px 14px;
+  }
+
+  .check-item .check-label {
+    font-size: 13px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 3px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .check-item .check-label::before {
+    content: '□';
+    font-size: 14px;
+    color: var(--primary);
+  }
+
+  .check-item .check-desc {
+    font-size: 12px;
+    color: var(--text-sub);
+    line-height: 1.6;
+    padding-left: 22px;
+  }
+
+  /* タグ */
+  .tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 2px 10px;
+    border-radius: 20px;
+    margin-top: 6px;
+  }
+
+  .tag.blue { background: #e8eeff; color: var(--primary); }
+  .tag.green { background: #e0f7ef; color: var(--accent); }
+  .tag.amber { background: var(--warning-light); color: var(--warning); }
+
+  /* 最終ゴール */
+  .goal-bar {
+    background: linear-gradient(135deg, #1a5cff 0%, #00b67a 100%);
+    border-radius: 16px;
+    padding: 24px 28px;
+    color: #fff;
+    text-align: center;
+    box-shadow: 0 6px 24px rgba(26,92,255,0.2);
+    margin-top: 8px;
+  }
+
+  .goal-bar .goal-icon {
+    font-size: 32px;
+    margin-bottom: 8px;
+  }
+
+  .goal-bar .goal-title {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .goal-bar .goal-sub {
+    font-size: 12px;
+    opacity: 0.85;
+    margin-top: 4px;
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 36px;
+    font-size: 11px;
+    color: #aab0cc;
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <header>
+    <div class="badge">IT導入補助金</div>
+    <h1>実績報告完了までの流れ</h1>
+    <p>補助金受取までの全ステップをご確認ください</p>
+  </header>
+
+  <!-- STEP 1 -->
+  <div class="step">
+    <div class="step-line-wrap">
+      <div class="step-circle">1</div>
+      <div class="connector"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-card highlight">
+        <div class="step-title">請求書のご入金対応</div>
+        <div class="step-note">請求書に記載の金額をご確認のうえ、お振込みをお願いいたします。</div>
+        <span class="tag blue">お客様対応</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 2 -->
+  <div class="step">
+    <div class="step-line-wrap">
+      <div class="step-circle">2</div>
+      <div class="connector"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-card">
+        <div class="step-title">ツールの導入・ご利用開始</div>
+        <div class="step-note">弊社にて着金確認後、ログインIDとパスワードをお送りします。<br>お客様にてログインのうえ、ご利用をご開始ください。</div>
+        <span class="tag amber">お客様対応</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 3 -->
+  <div class="step">
+    <div class="step-line-wrap">
+      <div class="step-circle">3</div>
+      <div class="connector"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-card">
+        <div class="step-title">実績報告用書類のご準備</div>
+        <div class="step-note">以下の3点をご用意ください。</div>
+
+        <div class="checklist">
+          <div class="check-item">
+            <div class="check-label">支払い証憑</div>
+            <div class="check-desc">お振込み明細 ＋ 通帳の振込履歴が記帳されたページ</div>
+          </div>
+          <div class="check-item">
+            <div class="check-label">ツール管理画面のスクリーンショット</div>
+            <div class="check-desc">詳細は別途ご案内いたします</div>
+          </div>
+          <div class="check-item">
+            <div class="check-label">補助金受取口座情報</div>
+            <div class="check-desc">通帳の表面 ＋ 見開き1ページ目</div>
+          </div>
+        </div>
+        <span class="tag amber">お客様対応</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 4 -->
+  <div class="step">
+    <div class="step-line-wrap">
+      <div class="step-circle">4</div>
+      <div class="connector"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-card">
+        <div class="step-title">実績報告の入力作業</div>
+        <div class="step-note">お客様にて事務局ポータルへ実績報告を入力・提出いただきます。<br>審査完了まで約<strong>2週間</strong>を目安にお待ちください。</div>
+        <span class="tag amber">お客様対応</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 5 -->
+  <div class="step">
+    <div class="step-line-wrap">
+      <div class="step-circle">5</div>
+      <div class="connector"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-card">
+        <div class="step-title">審査完了後の承認</div>
+        <div class="step-note">事務局より振込内容の最終確認が行われます。</div>
+        <span class="tag blue">事務局対応</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- STEP 6 -->
+  <div class="step">
+    <div class="step-line-wrap">
+      <div class="step-circle accent">6</div>
+      <div class="connector last"></div>
+    </div>
+    <div class="step-body">
+      <div class="step-card accent-card">
+        <div class="step-title">補助金の着金</div>
+        <div class="step-note">承認後、概ね<strong>2週間</strong>で補助金が口座へ振り込まれます。</div>
+        <span class="tag green">完了</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ゴール -->
+  <div class="goal-bar">
+    <div class="goal-icon">🎉</div>
+    <div class="goal-title">補助金受取完了</div>
+    <div class="goal-sub">入金確認〜着金まで、サポートいたします</div>
+  </div>
+
+  <footer>KMST　実績報告フロー</footer>
+
+</div>
+</body>
+</html>
