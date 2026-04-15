@@ -6,14 +6,17 @@
 <title>申請準備ガイド｜デジタル化・AI導入補助金2026</title>
 <style>
   * { box-sizing: border-box; margin: 0; padding: 0; }
-  body { font-family: 'Meiryo', 'Yu Gothic', sans-serif; background: #f0f3f7; color: #222; }
+  body { font-family: 'Noto Sans JP', system-ui, 'Hiragino Kaku Gothic ProN', sans-serif; background: #fafafa; color: #2C2C2C; }
 
   .header {
-    background: linear-gradient(135deg, #1B4F72, #2980b9);
-    color: white; padding: 22px 30px; text-align: center;
+    background: white; color: #2C2C2C; padding: 22px 30px;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    border-bottom: 3px solid #E53935;
   }
-  .header h1 { font-size: 19px; font-weight: bold; }
-  .header p { font-size: 12px; margin-top: 5px; opacity: 0.85; }
+  .header img.logo { height: 36px; }
+  .header .header-text { text-align: center; }
+  .header h1 { font-size: 18px; font-weight: bold; letter-spacing: 0.5px; color: #2C2C2C; }
+  .header p { font-size: 12px; margin-top: 4px; color: #6b6b6b; }
 
   /* ステップナビ */
   .step-nav {
@@ -27,7 +30,7 @@
     background: white; border: 2px solid #dde3ea; color: #888;
     transition: all 0.2s; white-space: nowrap;
   }
-  .step-nav-item.active { background: #1B4F72; border-color: #1B4F72; color: white; }
+  .step-nav-item.active { background: #E53935; border-color: #E53935; color: white; }
   .step-nav-item .sn { font-size: 11px; }
   .step-arrow { color: #bbb; font-size: 18px; padding: 0 2px; }
 
@@ -42,8 +45,8 @@
   .section-header {
     padding: 14px 20px; display: flex; align-items: flex-start; gap: 10px;
   }
-  .section-header.blue { background: #1B4F72; color: white; }
-  .section-header.orange { background: #E67E22; color: white; }
+  .section-header.blue { background: #E53935; color: white; }
+  .section-header.orange { background: #E53935; color: white; }
 
   .section-header .badge {
     background: rgba(255,255,255,0.25); color: white; font-size: 11px;
@@ -61,12 +64,12 @@
   .item:last-child { border-bottom: none; }
 
   .num-blue {
-    background: #1B4F72; color: white; width: 30px; height: 30px;
+    background: #E53935; color: white; width: 30px; height: 30px;
     border-radius: 50%; display: flex; align-items: center; justify-content: center;
     font-size: 14px; font-weight: bold; flex-shrink: 0; margin-top: 2px;
   }
   .num-orange {
-    background: #E67E22; color: white; width: 30px; height: 30px;
+    background: #E53935; color: white; width: 30px; height: 30px;
     border-radius: 50%; display: flex; align-items: center; justify-content: center;
     font-size: 14px; font-weight: bold; flex-shrink: 0; margin-top: 2px;
   }
@@ -78,14 +81,14 @@
 
   .item-content { flex: 1; min-width: 0; }
   .item-title { font-size: 15px; font-weight: bold; margin-bottom: 6px; }
-  .title-blue { color: #1B4F72; }
-  .title-orange { color: #D35400; }
+  .title-blue { color: #1A1A2E; }
+  .title-orange { color: #1A1A2E; }
 
   .time-badge {
-    display: inline-block; font-size: 11px; background: #EBF5FB; color: #1B4F72;
+    display: inline-block; font-size: 11px; background: #fff0ef; color: #C62828;
     padding: 2px 8px; border-radius: 10px; margin-bottom: 8px; font-weight: bold;
   }
-  .time-badge.orange { background: #FDEBD0; color: #7E5109; }
+  .time-badge.orange { background: #fff0ef; color: #C62828; }
 
   .item-notes { font-size: 13px; line-height: 1.8; color: #444; }
   .item-notes li { margin-left: 16px; margin-bottom: 2px; }
@@ -110,17 +113,17 @@
   /* ボタン類 */
   .link-btn {
     display: inline-flex; align-items: center; gap: 5px;
-    margin-top: 10px; background: #EBF5FB; color: #1B4F72;
-    border: 1px solid #AED6F1; padding: 7px 16px; border-radius: 20px;
+    margin-top: 10px; background: #f5f3f1; color: #2C2C2C;
+    border: 1px solid #ddd; padding: 7px 16px; border-radius: 20px;
     font-size: 12px; text-decoration: none; font-weight: bold;
     transition: background 0.2s;
   }
-  .link-btn:hover { background: #D6EAF8; }
-  .link-btn.orange { background: #FDEBD0; color: #7E5109; border-color: #F0A500; }
-  .link-btn.orange:hover { background: #FAD7A0; }
-  .link-btn.video { background: #FDEDEC; color: #922B21; border-color: #F1948A; }
-  .link-btn.video:hover { background: #FADBD8; }
-  .link-btn.manual { background: #EBF5FB; color: #1a5276; border-color: #85C1E9; }
+  .link-btn:hover { background: #ebe8e5; }
+  .link-btn.orange { background: #fff0ef; color: #C62828; border-color: #f0c0bf; }
+  .link-btn.orange:hover { background: #fde0de; }
+  .link-btn.video { background: #fff0ef; color: #C62828; border-color: #f0c0bf; }
+  .link-btn.video:hover { background: #fde0de; }
+  .link-btn.manual { background: #f5f3f1; color: #2C2C2C; border-color: #ddd; }
 
   .btn-row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
 
@@ -144,22 +147,22 @@
   }
   .step-list li:last-child { border-bottom: none; padding-bottom: 0; }
   .step-circle {
-    background: #1B4F72; color: white;
+    background: #E53935; color: white;
     width: 24px; height: 24px; border-radius: 50%;
     display: flex; align-items: center; justify-content: center;
     font-size: 11px; font-weight: bold; flex-shrink: 0; margin-top: 2px;
   }
-  .step-circle.orange { background: #E67E22; }
+  .step-circle.orange { background: #E53935; }
 
   /* サンプル画像 */
   .sample-toggle {
     margin-top: 10px; cursor: pointer;
     display: inline-flex; align-items: center; gap: 6px;
-    font-size: 12px; color: #1B4F72; border: 1px solid #AED6F1;
-    padding: 5px 12px; border-radius: 20px; background: #EBF5FB;
+    font-size: 12px; color: #2C2C2C; border: 1px solid #ddd;
+    padding: 5px 12px; border-radius: 20px; background: #f5f3f1;
     user-select: none; transition: all 0.2s;
   }
-  .sample-toggle:hover { background: #D6EAF8; }
+  .sample-toggle:hover { background: #ebe8e5; }
   .sample-img-wrap { display: none; margin-top: 10px; border: 1px solid #dde3ea; border-radius: 8px; overflow: hidden; }
   .sample-img-wrap.open { display: block; }
   .sample-img-wrap img { width: 100%; display: block; }
@@ -188,7 +191,7 @@
     border-radius: 8px; background: white; cursor: pointer;
     font-size: 14px; font-weight: bold; color: #666; transition: all 0.2s;
   }
-  .tab-btn.active { background: #1B4F72; border-color: #1B4F72; color: white; }
+  .tab-btn.active { background: #E53935; border-color: #E53935; color: white; }
   .tab-content { display: none; }
   .tab-content.active { display: block; }
 
@@ -200,8 +203,8 @@
   }
   .nav-btn.prev { background: #eee; color: #555; }
   .nav-btn.prev:hover { background: #ddd; }
-  .nav-btn.next { background: #1B4F72; color: white; }
-  .nav-btn.next:hover { background: #154360; }
+  .nav-btn.next { background: #E53935; color: white; }
+  .nav-btn.next:hover { background: #C62828; }
 
   .step-progress { text-align: center; font-size: 12px; color: #888; margin-bottom: 16px; }
 
@@ -226,9 +229,14 @@
 </head>
 <body>
 
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap" rel="stylesheet">
 <div class="header">
-  <h1>📋 申請準備ガイド｜デジタル化・AI導入補助金2026</h1>
-  <p>STEP順に進めることで、スムーズに申請手続きが完了します</p>
+  <img class="logo" src="kmst-logo.png" alt="KMST">
+  <div class="header-text">
+    <h1>📋 申請準備ガイド｜デジタル化・AI導入補助金2026</h1>
+    <p>STEP順に進めることで、スムーズに申請手続きが完了します</p>
+  </div>
 </div>
 
 <div class="container">
