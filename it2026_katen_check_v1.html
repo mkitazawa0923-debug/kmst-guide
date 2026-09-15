@@ -14,19 +14,21 @@
   h1 { font-size: 22px; line-height: 1.5; }
   .date { color: var(--sub); font-size: 13px; margin-top: 10px; }
   h2 { font-size: 17px; color: var(--red); border-left: 5px solid var(--red); padding-left: 12px; margin: 40px 0 14px; }
+  h3 { font-size: 14.5px; margin: 18px 0 8px; }
   p { margin-bottom: 12px; }
   table { width: 100%; border-collapse: collapse; margin: 14px 0 18px; font-size: 14px; }
   th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
   th { background: #faf5f5; font-weight: 600; }
-  .check { width: 44px; text-align: center; font-size: 18px; color: var(--sub); }
-  .quote { background: var(--bg); border-left: 4px solid #c9ced8; padding: 10px 16px; margin: 10px 0 14px; font-size: 13.5px; color: #3a4150; }
-  .btn { display: inline-block; background: var(--red); color: #fff; text-decoration: none; padding: 9px 22px; border-radius: 6px; font-size: 14px; font-weight: 600; margin: 4px 0 14px; }
-  .steps { margin: 0 0 14px 22px; }
+  .btn { display: inline-block; background: var(--red); color: #fff; text-decoration: none; padding: 9px 22px; border-radius: 6px; font-size: 14px; font-weight: 600; margin: 4px 0 10px; }
+  .steps { margin: 0 0 12px 22px; }
   .steps li { margin-bottom: 7px; }
   .warn { background: #fdf6f6; border: 1px solid #eecfcf; border-radius: 8px; padding: 13px 18px; margin: 12px 0 20px; font-size: 14px; }
   .warn b { color: var(--red); }
+  .redo { background: var(--bg); border: 1px dashed #c9ced8; border-radius: 8px; padding: 14px 18px; margin: 14px 0 8px; font-size: 14px; }
+  .redo b { color: var(--red); }
   .sample-label { font-size: 13px; font-weight: 700; color: var(--ok); margin: 16px 0 8px; }
-  /* サンプル画面の再現 */
+  .shot { border: 1px solid var(--line); border-radius: 10px; max-width: 100%; display: block; box-shadow: 0 2px 10px rgba(0,0,0,.06); }
+  .shot-note { font-size: 12.5px; color: var(--sub); margin: 8px 0 18px; }
   .mock { border: 1px solid var(--line); border-radius: 12px; padding: 20px; background: #fff; box-shadow: 0 2px 10px rgba(0,0,0,.06); max-width: 480px; margin: 0 0 8px; }
   .mock-head { color: #1d3fbf; font-weight: 700; font-size: 13px; line-height: 1.5; margin-bottom: 12px; }
   .mock-head span { font-size: 16px; }
@@ -37,11 +39,8 @@
   .mock-links { color: #1d3fbf; font-size: 12.5px; margin-bottom: 10px; }
   .mock-status { border-top: 1px solid var(--line); padding-top: 10px; font-size: 13.5px; }
   .dot { color: var(--ok); font-size: 16px; }
-  .mock-note { font-size: 12.5px; color: var(--sub); margin-bottom: 20px; }
-  .mock-pdfbtn { display: inline-block; background: #1d3fbf; color: #fff; border-radius: 6px; padding: 8px 18px; font-size: 13.5px; font-weight: 600; }
-  .badge-done { display: inline-block; background: #e7f4ec; color: var(--ok); border: 1px solid #bfe3cc; border-radius: 999px; font-size: 12px; padding: 2px 12px; margin-left: 8px; font-weight: 700; }
   footer { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 16px; font-size: 12.5px; color: var(--sub); }
-  @media print { body { background: #fff; } .page { padding: 24px 8mm; max-width: none; } h2 { break-after: avoid; } .mock, table, .warn { break-inside: avoid; } }
+  @media print { body { background: #fff; } .page { padding: 24px 8mm; max-width: none; } h2 { break-after: avoid; } .mock, table, .warn, .shot { break-inside: avoid; } }
 </style>
 </head>
 <body>
@@ -53,64 +52,50 @@
   <div class="date">2026年9月15日</div>
 </header>
 
-<p>再申請にあたり、以下の3つの加点項目が取得済みかどうかのご確認をお願いいたします。現在の審査では加点項目は事実上「取得していることが前提」の扱いです。いずれも<b>無料</b>で、パソコンから15分程度で完了します。</p>
-<p>3つとも共通の注意点として、必ず<b>補助金申請に使用しているGビズIDプライム</b>（貴社の申請用アカウント）でログインして実施してください。別のIDで実施したものは加点の対象になりません。</p>
+<p>以下の3つの加点項目は、これまでの申請準備の中で<b>すでにご実施いただいている場合があります</b>。新たにお手続きいただく前に、まず「取得済みかどうか」を下記の方法でご確認ください。確認の結果、満たされていない項目だけ、あらためてご取得をお願いいたします（いずれも無料・15分程度です）。</p>
+<p>3つとも共通のポイントは、<b>補助金申請に使用しているGビズIDプライム</b>と紐づいて実施されていることです。別のIDで実施したものは加点の対象になりません。</p>
 
 <h2>確認チェックリスト</h2>
 <table>
-  <tr><th class="check">✓</th><th>加点項目</th><th>「取得済み」と言える状態</th></tr>
-  <tr><td class="check">□</td><td>① IT戦略ナビwith（デジwith）</td><td>GビズIDプライムでログインして診断を実施し、結果の「IT戦略マップ」が表示・保存できる</td></tr>
-  <tr><td class="check">□</td><td>② 省力化ナビ</td><td>GビズIDプライムを入力して活用し、<b>「解決策」のPDFをダウンロード済み</b></td></tr>
-  <tr><td class="check">□</td><td>③ 成長加速マッチングサービス</td><td>会員登録のうえ挑戦課題を登録し、ステータスが<b>「掲載中」</b>になっている</td></tr>
+  <tr><th>加点項目</th><th>まず確認すること</th><th style="width:150px">確認結果</th></tr>
+  <tr><td>① IT戦略ナビwith</td><td>パソコン内に「IT戦略マップ」のPDFがあり、1ページ目の「GビズIDプライム」欄に申請用GビズIDのメールアドレスが記載されている</td><td>□ 取得済み<br>□ 要再取得</td></tr>
+  <tr><td>② 省力化ナビ</td><td>パソコン内に省力化ナビからダウンロードした「解決策」のPDFがある</td><td>□ 取得済み<br>□ 要再取得</td></tr>
+  <tr><td>③ 成長加速マッチングサービス</td><td>ログイン後のトップページに「掲載中」の挑戦課題がある</td><td>□ 取得済み<br>□ 要再取得</td></tr>
 </table>
 
 <h2>① IT戦略ナビwith（デジwith）</h2>
-<div class="quote">公募要領の要件：中小機構が運営するデジタル化支援ポータルサイト「デジwith」における「IT戦略ナビwith」を交付申請前に行っていること（実施時に本事業の申請に用いたGビズIDプライムを入力し、実施結果（IT戦略マップ）が表示されたものを交付申請時に添付）。</div>
-<a class="btn" href="https://digiwith.smrj.go.jp/it-map/" target="_blank">IT戦略ナビwith を開く</a>
+<h3>確認方法</h3>
 <ol class="steps">
-  <li>上のリンクからIT戦略ナビwithを開き、<b>GビズIDプライムでログイン</b>します</li>
-  <li>自社の状況について選択式の質問に回答します（約10分）</li>
-  <li>診断結果として「IT戦略マップ」が表示されれば完了です。<b>マップはPDFで保存</b>してください（申請時に添付します）</li>
+  <li>パソコンの「ダウンロード」フォルダなどで、「<b>IT戦略マップ</b>」という名前のPDFファイルを探してください（実施時に<b>「IT戦略マップ」という名前でファイルが自動生成</b>されます）</li>
+  <li>ファイルを開き、1ページ目「企業情報」の一番下にある「<b>GビズIDプライム</b>」の欄を確認してください</li>
+  <li>そこに<b>申請に使用しているGビズIDに紐づいたメールアドレス</b>が記載されていれば、取得済みです</li>
 </ol>
-<div class="sample-label">✔ 満たされている状態のイメージ</div>
-<div class="mock">
-  <div class="mock-head">IT戦略ナビwith</div>
-  <div class="mock-card">
-    <div class="mock-title">診断結果：IT戦略マップ <span class="badge-done">作成済み</span></div>
-    <div class="mock-links">同業他社比較マップ ／ IT戦略マップ（PDF保存）</div>
-    <div class="mock-status"><span class="dot">●</span> GビズIDプライムでログイン済み</div>
-  </div>
-</div>
-<p class="mock-note">※ ログインせずに「お試し診断」だけを行った場合は加点になりません。必ずログイン状態で実施してください。</p>
+<div class="sample-label">✔ 確認いただく箇所（1ページ目・赤枠の欄）</div>
+<img class="shot" src="itmap_sample.png" alt="IT戦略マップ1ページ目のサンプル。企業情報のGビズIDプライム欄にメールアドレスが記載されている">
+<p class="shot-note">※ サンプルのため、メールアドレスは例に差し替えています。この欄が空欄の場合や、申請に使っているGビズIDと違うメールアドレスの場合は「要再取得」です。</p>
+<div class="redo"><b>ファイルが見つからない・メールアドレスが違う場合：</b>お手数ですが再度ご実施ください。<br>
+<a class="btn" href="https://digiwith.smrj.go.jp/it-map/" target="_blank">IT戦略ナビwith を開く</a><br>
+申請用のGビズIDプライムでログイン → 選択式の質問に回答（約10分） → 表示された「IT戦略マップ」を<b>PDFで保存</b>してください。</div>
 
 <h2>② 省力化ナビ</h2>
-<div class="quote">公募要領の要件：交付申請締切日時点において、中小機構「省力化ナビ」を活用し、<b>「解決策」のPDFをダウンロードすることにより</b>生産性向上の知見を確認していること（活用時に本事業の申請に用いたGビズIDプライムを入力すること）。</div>
-<a class="btn" href="https://labour-saving.smrj.go.jp/" target="_blank">省力化ナビ を開く</a>
+<h3>確認方法</h3>
 <ol class="steps">
-  <li>上のリンクから省力化ナビを開き、<b>GビズIDプライムを入力</b>して利用を開始します</li>
-  <li>業種・課題を選ぶと、自社に合った省力化の「解決策」が表示されます</li>
-  <li><b>「解決策」をPDFでダウンロード</b>したら完了です。ダウンロードしたPDFは保管してください</li>
+  <li>パソコンの「ダウンロード」フォルダなどで、省力化ナビからダウンロードした「<b>解決策</b>」のPDFファイルがあるか探してください</li>
+  <li>ファイルが見つかれば、取得済みです（実施した時期のダウンロード履歴もあわせてご確認ください）</li>
 </ol>
-<div class="sample-label">✔ 満たされている状態のイメージ</div>
-<div class="mock">
-  <div class="mock-head">省力化ナビ</div>
-  <div class="mock-card">
-    <div class="mock-title">あなたの課題に対する解決策</div>
-    <span class="mock-pdfbtn">解決策をPDFでダウンロード</span><span class="badge-done">ダウンロード済み</span>
-    <div class="mock-status" style="margin-top:12px"><span class="dot">●</span> GビズIDプライム入力済み</div>
-  </div>
-</div>
-<p class="mock-note">※ 2026年5月の公募要領改訂で要件が厳しくなったポイントです。<b>画面を見るだけでは加点になりません。「解決策PDFのダウンロード」まで</b>が要件です。</p>
+<div class="warn"><b>ご注意：</b>省力化ナビは<b>画面で解決策を見るだけでは加点になりません</b>。「解決策のPDFをダウンロードしたこと」までが要件です（2026年5月の公募要領改訂で厳格化されたポイントです）。PDFが見つからない場合は、念のため再度ダウンロードをお願いします。</div>
+<div class="redo"><b>PDFが見つからない場合：</b>お手数ですが再度ご実施ください。<br>
+<a class="btn" href="https://labour-saving.smrj.go.jp/" target="_blank">省力化ナビ を開く</a><br>
+申請用の<b>GビズIDプライムを入力</b>して利用 → 業種・課題を選択 → 表示された「解決策」を<b>PDFでダウンロード</b>し、保管してください。</div>
 
 <h2>③ 成長加速マッチングサービス</h2>
-<div class="quote">公募要領の要件：交付申請締切日時点において、中小企業庁「成長加速マッチングサービス」で会員登録を行い、挑戦課題を登録していること。<b>※登録されている課題のステータスが「掲載中」となっている課題を確認できた場合のみ加点</b>。</div>
-<a class="btn" href="https://mirasapo-connect.go.jp/" target="_blank">成長加速マッチングサービス を開く</a>
+<h3>確認方法</h3>
 <ol class="steps">
-  <li>上のリンクからサービスを開き、「新規登録・ログイン」から<b>GビズIDでログイン</b>して事業者登録します</li>
-  <li>「挑戦課題」を1件登録します（販路開拓・資金調達・人材確保など、貴社の実際の経営課題で構いません）</li>
-  <li>マイページの挑戦課題一覧で、登録した課題のステータスが<b>緑の「掲載中」</b>になっていれば完了です</li>
+  <li>下のリンクから成長加速マッチングサービスに<b>GビズIDでログイン</b>してください</li>
+  <li>ログイン後のトップページ（挑戦課題の一覧）に、緑の「<b>掲載中</b>」と表示された課題があれば、取得済みです</li>
 </ol>
-<div class="sample-label">✔ 満たされている状態のイメージ（挑戦課題の画面）</div>
+<a class="btn" href="https://mirasapo-connect.go.jp/" target="_blank">成長加速マッチングサービス を開く</a>
+<div class="sample-label">✔ 満たされている状態のサンプル（ログイン後のトップページ）</div>
 <div class="mock">
   <div class="mock-head">中小企業庁<br><span>成長加速マッチングサービス</span></div>
   <div style="font-weight:700; font-size:16px; margin-bottom:10px;">挑戦課題</div>
@@ -122,14 +107,16 @@
     <div class="mock-status"><span class="dot">●</span> <b>掲載中</b><span style="float:right; color:#1d3fbf;">✎ 編集</span></div>
   </div>
 </div>
-<p class="mock-note">※ この「<b>掲載中</b>」の表示が加点の条件です。下書きのまま・掲載終了になっている課題は加点の対象になりません。コンタクト数・マッチング数は0件でも問題ありません。</p>
+<p class="shot-note">※ この「<b>掲載中</b>」の表示が確認できればOKです。コンタクト数・マッチング数は0件でも問題ありません。下書きのまま・「掲載終了」になっている場合は「要再取得」です。</p>
+<div class="redo"><b>「掲載中」の課題がない場合：</b>「挑戦課題」を1件ご登録ください。<br>
+販路開拓・資金調達・人材確保など、貴社の実際の経営課題で構いません。登録後、一覧でステータスが「掲載中」になっていることをご確認ください。</div>
 
 <h2>ご確認後の流れ</h2>
-<p>3項目のご確認（未取得の場合はお手続き）が完了しましたら、担当までご一報ください。取得状況を反映して再申請の準備を進めます。手順のご不明点や、操作にお困りの場合は、お電話・チャットにてお気軽にお問い合わせください。弊社にて画面を拝見しながらご案内することも可能です。</p>
+<p>3項目それぞれの確認結果（取得済み／要再取得）を、担当までご一報ください。「要再取得」の項目は、本ガイドのリンクからそのままお手続きいただけます。操作にお困りの場合は、お電話・チャットにてお気軽にお問い合わせください。画面を拝見しながらご案内することも可能です。</p>
 <div class="warn"><b>締切にご注意ください：</b>いずれの加点も<b>交付申請の締切日（2026年9月29日 17:00）まで</b>に完了している必要があります。お早めのご確認をお願いいたします。</div>
 
 <footer>
-  本資料は、デジタル化・AI導入補助金2026 公募要領（2026年8月28日改訂版）に基づき作成しています。画面イメージは実際のサービス画面を簡略化したものです。制度内容は今後変更される場合があります。<br>
+  本資料は、デジタル化・AI導入補助金2026 公募要領（2026年8月28日改訂版）に基づき作成しています。画面サンプルは一部を例示用に加工しています。制度内容は今後変更される場合があります。<br>
   株式会社KMST（香川県三豊市）
 </footer>
 
