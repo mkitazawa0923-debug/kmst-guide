@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>デジタル化・AI導入補助金2026 制度のご説明｜株式会社KMST</title>
+<style>
+  :root { --red: #b91c1c; --ink: #1f2430; --sub: #5a6270; --line: #e3e6ec; --bg: #f7f8fa; --pale: #fdf6f6; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: "Hiragino Kaku Gothic ProN", "Hiragino Sans", "Yu Gothic", sans-serif; color: var(--ink); background: var(--bg); line-height: 1.9; font-size: 15px; }
+  .page { max-width: 860px; margin: 0 auto; background: #fff; padding: 48px 56px 56px; }
+  header { border-bottom: 3px solid var(--red); padding-bottom: 20px; margin-bottom: 28px; }
+  .corp { display: flex; align-items: center; gap: 10px; font-size: 12px; letter-spacing: .12em; color: var(--red); font-weight: 700; margin-bottom: 12px; }
+  .corp img { height: 22px; }
+  h1 { font-size: 24px; line-height: 1.5; }
+  .lead { margin-top: 10px; color: var(--sub); font-size: 14px; }
+  .date { color: var(--sub); font-size: 12.5px; margin-top: 8px; }
+  nav.toc { background: var(--bg); border-radius: 8px; padding: 14px 20px; margin-bottom: 8px; font-size: 14px; }
+  nav.toc ol { margin: 4px 0 0 22px; columns: 2; column-gap: 32px; }
+  nav.toc a { color: var(--ink); text-decoration: none; }
+  nav.toc a:hover { color: var(--red); }
+  h2 { font-size: 19px; color: var(--red); border-left: 5px solid var(--red); padding-left: 12px; margin: 44px 0 16px; }
+  h3 { font-size: 16px; margin: 22px 0 8px; }
+  p { margin-bottom: 12px; }
+  table { width: 100%; border-collapse: collapse; margin: 12px 0 16px; font-size: 14px; }
+  th, td { border: 1px solid var(--line); padding: 9px 12px; text-align: left; vertical-align: top; }
+  th { background: #faf5f5; font-weight: 600; }
+  td.num, th.num { text-align: right; white-space: nowrap; }
+  .table-wrap { overflow-x: auto; }
+  .callout { background: var(--pale); border: 1px solid #eecfcf; border-radius: 8px; padding: 16px 20px; margin: 16px 0; }
+  .callout b, .em { color: var(--red); }
+  .big { font-size: 26px; font-weight: 700; color: var(--red); }
+  .hero { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; margin: 18px 0 8px; }
+  .hero div { border: 1px solid var(--line); border-radius: 8px; padding: 14px; text-align: center; }
+  .hero .k { font-size: 12.5px; color: var(--sub); }
+  .hero .v { font-size: 22px; font-weight: 700; color: var(--red); line-height: 1.4; }
+  .hero .s { font-size: 12px; color: var(--sub); }
+  ul { margin: 0 0 14px 22px; }
+  li { margin-bottom: 6px; }
+  .flow { list-style: none; margin: 12px 0; counter-reset: step; }
+  .flow li { position: relative; padding: 10px 14px 10px 54px; border: 1px solid var(--line); border-radius: 8px; margin-bottom: 8px; }
+  .flow li::before { counter-increment: step; content: counter(step); position: absolute; left: 14px; top: 10px; width: 28px; height: 28px; border-radius: 50%; background: var(--red); color: #fff; font-weight: 700; text-align: center; line-height: 28px; font-size: 14px; }
+  .flow .who { display: inline-block; font-size: 11.5px; padding: 0 8px; border-radius: 10px; margin-left: 6px; vertical-align: 2px; }
+  .who.you { background: #e8f0fe; color: #1a4fb4; }
+  .who.kmst { background: #fde8e8; color: var(--red); }
+  .who.jim { background: #eceff3; color: #3a4150; }
+  .calc { border: 2px solid var(--red); border-radius: 10px; padding: 18px 20px; margin: 16px 0; }
+  .calc .row { display: flex; flex-wrap: wrap; gap: 14px 24px; align-items: center; margin-bottom: 12px; }
+  .calc label { font-size: 14px; }
+  .calc input[type=text] { font-size: 18px; padding: 6px 10px; width: 170px; text-align: right; border: 1px solid #c9ced8; border-radius: 6px; }
+  .calc .out { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; }
+  .calc .out div { background: var(--bg); border-radius: 8px; padding: 10px; text-align: center; }
+  .calc .out .k { font-size: 12.5px; color: var(--sub); }
+  .calc .out .v { font-size: 20px; font-weight: 700; }
+  .calc .out .v.red { color: var(--red); }
+  .note { font-size: 12.5px; color: var(--sub); }
+  dl.faq dt { font-weight: 700; margin-top: 14px; }
+  dl.faq dt::before { content: "Q. "; color: var(--red); }
+  dl.faq dd { margin: 4px 0 0 0; padding-left: 1.6em; }
+  footer { margin-top: 44px; border-top: 1px solid var(--line); padding-top: 16px; font-size: 12.5px; color: var(--sub); }
+  footer a { color: var(--sub); }
+  @media (max-width: 640px) {
+    .page { padding: 28px 16px 40px; }
+    h1 { font-size: 20px; }
+    nav.toc ol { columns: 1; }
+    .hero, .calc .out { grid-template-columns: 1fr; }
+  }
+  @media print {
+    body { background: #fff; font-size: 13px; }
+    .page { padding: 16px 8mm; max-width: none; }
+    .calc, nav.toc { display: none; }
+    h2 { break-after: avoid; }
+    table, .callout, .flow li, .hero { break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+<header>
+  <div class="corp"><img src="kmst-logo.png" alt="KMST">株式会社KMST</div>
+  <h1>デジタル化・AI導入補助金2026<br>制度のご説明</h1>
+  <p class="lead">ソフトウェアやクラウドサービス、レジ・パソコンの導入費用の一部を国が補助する制度です。旧称は「IT導入補助金」で、2026年度から現在の名前に変わりました。</p>
+  <p class="date">2026年11月6日時点の公式情報に基づいて作成しています</p>
+</header>
+
+<nav class="toc">
+  <b>目次</b>
+  <ol>
+    <li><a href="#s1">ひと目でわかるポイント</a></li>
+    <li><a href="#s2">対象となる事業者</a></li>
+    <li><a href="#s3">申請枠と補助額・補助率</a></li>
+    <li><a href="#s4">補助額の目安（ラクリア会計）</a></li>
+    <li><a href="#s5">採択の状況と審査のポイント</a></li>
+    <li><a href="#s6">申請の条件とお約束いただくこと</a></li>
+    <li><a href="#s7">スケジュール</a></li>
+    <li><a href="#s8">申請から入金までの流れ</a></li>
+    <li><a href="#s9">ご準備いただくもの</a></li>
+    <li><a href="#s10">よくあるご質問</a></li>
+  </ol>
+</nav>
+
+<h2 id="s1">1. ひと目でわかるポイント</h2>
+<div class="hero">
+  <div><div class="k">補助率（インボイス枠）</div><div class="v">最大4/5</div><div class="s">小規模事業者・補助額50万円までの部分</div></div>
+  <div><div class="k">補助額の上限（インボイス枠）</div><div class="v">350万円</div><div class="s">会計・受発注・決済のうち2機能以上</div></div>
+  <div><div class="k">次回の締切</div><div class="v">12月1日（火）</div><div class="s">17:00まで（第7次締切）</div></div>
+</div>
+<div class="callout">
+  ご注意いただきたい点が2つあります。まず、<b>補助金は後払い</b>です。導入費用をいったん全額お支払いいただき、実績報告が済んだ後に補助金が振り込まれます。次に、<b>交付決定の前に契約・発注・支払いをすると補助の対象外</b>になります。導入は必ず交付決定の通知が届いてから進めてください。
+</div>
+
+<h2 id="s2">2. 対象となる事業者</h2>
+<p>日本国内で事業を営む中小企業・小規模事業者（個人事業主を含む）が対象です。業種ごとに、資本金と従業員数のどちらか一方が下の表の基準以下であれば対象になります。</p>
+<div class="table-wrap">
+<table>
+  <tr><th>業種</th><th class="num">資本金</th><th class="num">従業員数</th></tr>
+  <tr><td>製造業・建設業・運輸業</td><td class="num">3億円以下</td><td class="num">300人以下</td></tr>
+  <tr><td>卸売業</td><td class="num">1億円以下</td><td class="num">100人以下</td></tr>
+  <tr><td>サービス業（ソフトウェア業・情報処理サービス業・旅館業を除く）</td><td class="num">5,000万円以下</td><td class="num">100人以下</td></tr>
+  <tr><td>小売業</td><td class="num">5,000万円以下</td><td class="num">50人以下</td></tr>
+  <tr><td>旅館業</td><td class="num">5,000万円以下</td><td class="num">200人以下</td></tr>
+  <tr><td>その他の業種</td><td class="num">3億円以下</td><td class="num">300人以下</td></tr>
+  <tr><td>医療法人・社会福祉法人・学校法人</td><td class="num">—</td><td class="num">300人以下</td></tr>
+</table>
+</div>
+<p>このうち、常時使用する従業員が<b>商業・サービス業で5人以下</b>（宿泊業・娯楽業は20人以下）、<b>製造業その他で20人以下</b>の事業者は「小規模事業者」となり、インボイス枠などで補助率が上乗せされます。</p>
+
+<h2 id="s3">3. 申請枠と補助額・補助率</h2>
+<p>導入するツールの種類によって申請する枠が分かれます。会計ソフト・受発注システム・キャッシュレス決済・レジを導入する場合は、補助率が最も高い<b>インボイス枠（インボイス対応類型）</b>が中心になります。</p>
+<div class="table-wrap">
+<table>
+  <tr><th>申請枠</th><th>対象となるもの</th><th>補助額</th><th>補助率</th></tr>
+  <tr>
+    <td><b>インボイス枠<br>（インボイス対応類型）</b></td>
+    <td>会計・受発注・決済の機能を持つソフトウェア（クラウド利用料は最大2年分）、導入設定・保守などの役務</td>
+    <td>1機能：〜50万円<br>2機能以上：〜350万円</td>
+    <td>補助額50万円までの部分は<b>3/4</b>（小規模事業者は<b>4/5</b>）<br>50万円を超える部分は<b>2/3</b></td>
+  </tr>
+  <tr>
+    <td>　同上：ハードウェア</td>
+    <td>PC・タブレット・プリンター・複合機など<br>POSレジ・モバイルPOSレジ・券売機</td>
+    <td>PC等：〜10万円<br>レジ等：〜20万円</td>
+    <td>1/2</td>
+  </tr>
+  <tr>
+    <td><b>通常枠</b></td>
+    <td>業務効率化・売上アップのためのソフトウェア全般（顧客管理、勤怠、在庫管理など）</td>
+    <td>1プロセス以上：5万〜150万円未満<br>4プロセス以上：150万〜450万円</td>
+    <td>1/2（最低賃金近傍の事業者は2/3）</td>
+  </tr>
+  <tr>
+    <td><b>セキュリティ対策推進枠</b></td>
+    <td>IPA「サイバーセキュリティお助け隊サービス」（最大2年分）</td>
+    <td>5万〜150万円</td>
+    <td>1/2（小規模事業者は2/3）</td>
+  </tr>
+</table>
+</div>
+<p class="note">ハードウェアだけの申請はできず、ソフトウェアと一緒に申請する必要があります。金額はいずれも税抜です。このほか、受発注ソフトを取引先に無償提供する「電子取引類型」、商工会や商店街などで複数の事業者がまとまって申請する「複数者連携枠」もあります。</p>
+
+<div class="callout">
+  <b>2027年1月から「スマートレジ類型」「POSレジ類型」が新設されます。</b>2027年4月に予定されている飲食料品の消費税率引下げに備えてレジを導入・改修する事業者向けの類型で、2026年9月15日以降に契約したレジの導入・改修費用を、<b>支払いが終わった後にさかのぼって申請</b>できる点が大きな特徴です。補助率・上限額はインボイス枠と同じ水準で、申請受付は2027年1月中旬以降に始まる予定です。詳しい公募要領は今後公開されます。
+</div>
+
+<h2 id="s4">4. 補助額の目安（ラクリア会計の4プラン）</h2>
+<p>弊社では、インボイス枠で申請できるツールとして<b>「ラクリア会計」</b>をご提案しています。顧客管理、見積書・請求書・発注書の作成、支払管理、仕訳入力から決算書（3表）の作成、在庫管理までを1つの仕組みで扱えるクラウドサービスで、補助上限350万円の区分で申請します。</p>
+<p>プランごとの補助額と実質のご負担は次のとおりです。補助率は「補助額のうち50万円まで」と「50万円を超える部分」で変わるため、費用が大きくなるほど全体の補助率は2/3に近づきます。</p>
+<div class="table-wrap">
+<table>
+  <tr><th>プラン（税抜）</th><th>契約期間</th><th class="num">補助額<br>（中小企業）</th><th class="num">実質のご負担<br>（中小企業）</th><th class="num">補助額<br>（小規模事業者）</th><th class="num">実質のご負担<br>（小規模事業者）</th></tr>
+  <tr><td>240万円プラン</td><td>1年</td><td class="num">1,655,555円</td><td class="num">744,445円</td><td class="num">1,683,333円</td><td class="num">716,667円</td></tr>
+  <tr><td>300万円プラン</td><td>1年</td><td class="num">2,055,555円</td><td class="num">944,445円</td><td class="num">2,083,333円</td><td class="num">916,667円</td></tr>
+  <tr><td>480万円プラン</td><td>2年</td><td class="num">3,255,555円</td><td class="num">1,544,445円</td><td class="num">3,283,333円</td><td class="num">1,516,667円</td></tr>
+  <tr><td>520万円プラン</td><td>1年</td><td class="num">3,500,000円</td><td class="num">1,700,000円</td><td class="num">3,500,000円</td><td class="num">1,700,000円</td></tr>
+</table>
+</div>
+<p class="note">480万円プランは2年分の利用料をまとめて発注するプランで、1年あたりのご負担は中小企業で772,222円です。520万円プランは補助上限の350万円に達します。消費税は補助の対象外のため、ご負担は税抜で表示しています（お支払い時は税込）。各プランの詳細は<a href="https://kmst-proposal-rakulia-4plans.vercel.app/">ラクリア会計 導入のご提案</a>をご覧ください。</p>
+
+<div class="calc" id="calc">
+  <h3 style="margin-top:0">補助額シミュレーター</h3>
+  <div class="row">
+    <label>導入費用（税抜）<br><input type="text" id="cost" value="2,400,000" inputmode="numeric"> 円</label>
+    <label><input type="radio" name="size" value="mid" checked> 中小企業</label>
+    <label><input type="radio" name="size" value="small"> 小規模事業者</label>
+    <label><input type="radio" name="func" value="2" checked> 2機能以上</label>
+    <label><input type="radio" name="func" value="1"> 1機能</label>
+  </div>
+  <div class="out">
+    <div><div class="k">補助額</div><div class="v red" id="o-sub">—</div></div>
+    <div><div class="k">実質のご負担</div><div class="v" id="o-self">—</div></div>
+    <div><div class="k">実質の補助率</div><div class="v" id="o-rate">—</div></div>
+  </div>
+  <p class="note" style="margin-top:10px">ソフトウェア・役務分の目安です（ハードウェアは別枠で1/2）。1円未満は切り捨てています。実際の補助額は交付決定時に確定します。</p>
+</div>
+
+<h2 id="s5">5. 採択の状況と審査のポイント</h2>
+<p>申請すれば必ず受け取れる補助金ではなく、審査があります。今年度の公表結果は次のとおりで、インボイス枠でも<b>申請の半分以上が不採択</b>になっています。</p>
+<div class="table-wrap">
+<table>
+  <tr><th>締切回</th><th class="num">インボイス枠<br>申請数 → 交付決定数</th><th class="num">採択率</th><th class="num">通常枠<br>申請数 → 交付決定数</th><th class="num">採択率</th></tr>
+  <tr><td>第1次（6月決定）</td><td class="num">4,324 → 2,027</td><td class="num">46.9%</td><td class="num">2,028 → 891</td><td class="num">43.9%</td></tr>
+  <tr><td>第2次（7月決定）</td><td class="num">3,790 → 2,096</td><td class="num">55.3%</td><td class="num">1,879 → 819</td><td class="num">43.6%</td></tr>
+  <tr><td>第3次（9月決定）</td><td class="num">3,982 → 1,781</td><td class="num">44.7%</td><td class="num">1,913 → 807</td><td class="num">42.2%</td></tr>
+  <tr><td>第4次（10月決定）</td><td class="num">3,536 → 1,610</td><td class="num">45.5%</td><td class="num">1,836 → 816</td><td class="num">44.4%</td></tr>
+</table>
+</div>
+<p>審査では、導入するツールが本当に業務の効率化や売上につながるか、自社の課題を具体的に捉えているかに加えて、国が力を入れている取り組みへの対応が加点として評価されます。採択の可能性を高めるために、弊社では次の点をお客様と一緒に準備します。</p>
+<ul>
+  <li><b>加点の取得</b>：「デジwith」「省力化ナビ」「成長加速マッチングサービス」の3つは手続きだけで取れる加点のため、全件で取得をおすすめしています。</li>
+  <li><b>スマートレジの選定</b>：3次締切から「特に重視」と明記されています。レジを使う業種では有力な選択肢です。</li>
+  <li><b>賃上げへの取り組み</b>：事業場内の最低賃金を地域別最低賃金＋30円以上にし、1人当たり給与を年平均3%以上（過去に交付決定を受けた事業者は3.5%以上）引き上げる3年間の計画を立てると加点されます。加点を受けて採択された後に計画が達成できなかった場合は、その後の国の補助金で減点されるため、無理のない計画を一緒に検討します。</li>
+  <li><b>セキュリティ対策</b>：SECURITY ACTIONの宣言（二つ星）やサイバーセキュリティお助け隊サービスの導入が評価されます。</li>
+</ul>
+<p class="note">反対に、IT導入補助金2022〜2025で交付決定を受けたことがある場合は減点となり、過去と同じ機能のツールを導入する場合は不採択になることがあります。過去の受給歴はご相談の段階でお知らせください。</p>
+
+<h2 id="s6">6. 申請の条件とお約束いただくこと</h2>
+<h3>すべての申請者に必要な条件</h3>
+<ul>
+  <li>「GビズIDプライム」のアカウントを取得していること（発行までおおむね2週間）</li>
+  <li>IPAの「SECURITY ACTION」で一つ星または二つ星を宣言していること（数日で完了）</li>
+  <li>交付申請の直近月に、社内で最も低い時給が地域別最低賃金以上であること</li>
+  <li>申請者ご自身が管理する携帯電話番号を登録すること（SMSで認証コードが届きます）</li>
+</ul>
+<h3>条件によってお約束いただくこと</h3>
+<p>IT導入補助金2022〜2025で交付決定を受けたことがある事業者は、インボイス枠でも「1人当たり給与支給総額を年平均3.5%以上引き上げる3年間の計画」を立てることが申請の条件になります。通常枠の場合は、労働生産性を年3%以上向上させる計画が全員に必要で、補助額150万円以上では給与の引き上げ計画も必須です。これらの賃上げ計画が達成できなかった場合は、補助金の一部または全部の返還を求められることがあります。</p>
+<p>また、補助を受けた後は3年間、毎年「効果報告」として売上や人件費、賃金の状況を事務局へ報告していただきます。報告は弊社がサポートします。</p>
+
+<h2 id="s7">7. スケジュール</h2>
+<div class="table-wrap">
+<table>
+  <tr><th>項目</th><th>第7次締切分（通常枠・インボイス枠・セキュリティ枠）</th></tr>
+  <tr><td>申請締切</td><td><b class="em">2026年12月1日（火）17:00</b></td></tr>
+  <tr><td>交付決定（予定）</td><td>2027年1月19日（火）</td></tr>
+  <tr><td>導入・支払い・実績報告の期限（予定）</td><td>2027年7月30日（金）17:00</td></tr>
+</table>
+</div>
+<div class="callout">
+  12月1日の締切に間に合わせるには、<b>GビズIDプライムの申請を11月中旬までに済ませる</b>必要があります（発行まで約2週間）。まだお持ちでない場合は、ご相談当日の申請をおすすめします。なお、事務局からは通常枠・インボイス枠などの交付申請期限を2027年1月7日（木）17:00とする案内が出ており、今年度に申請できる機会は残りわずかです（スマートレジ類型・POSレジ類型は別スケジュールです）。
+</div>
+
+<h2 id="s8">8. 申請から入金までの流れ</h2>
+<ol class="flow">
+  <li>ご相談・導入ツールの選定<span class="who kmst">KMST</span><br><span class="note">課題をお伺いし、ラクリア会計のプランと補助額の見込みをご提案します。</span></li>
+  <li>GビズIDプライム取得・SECURITY ACTION宣言<span class="who you">お客様</span><br><span class="note">手順は弊社がご案内します。</span></li>
+  <li>必要書類のご提出・ヒアリング<span class="who you">お客様</span><br><span class="note">決算書や納税証明書などをお預かりし、事業計画に必要な数値を確認します。</span></li>
+  <li>申請書類の作成・入力<span class="who kmst">KMST</span><br><span class="note">事業計画や数値計画を弊社で作成し、申請マイページへ入力します。</span></li>
+  <li>内容のご確認・宣誓・提出<span class="who you">お客様</span><br><span class="note">最後の確認と提出ボタンは、お客様ご自身の操作になります。</span></li>
+  <li>審査・交付決定<span class="who jim">事務局</span><br><span class="note">締切からおよそ1〜2か月後に結果が通知されます。</span></li>
+  <li>契約・導入・お支払い<span class="who you">お客様</span><br><span class="note">交付決定の後に契約し、費用を全額お支払いいただきます（銀行振込が原則）。</span></li>
+  <li>実績報告<span class="who kmst">KMST</span><span class="who you">お客様</span><br><span class="note">支払いの証拠書類などを提出します。報告書類の準備は弊社がサポートします。</span></li>
+  <li>補助金の入金<span class="who jim">事務局</span><br><span class="note">報告内容が確定した後、指定口座へ振り込まれます。</span></li>
+  <li>効果報告（3年間）<span class="who kmst">KMST</span><span class="who you">お客様</span></li>
+</ol>
+
+<h2 id="s9">9. ご準備いただくもの</h2>
+<div class="table-wrap">
+<table>
+  <tr><th></th><th>法人</th><th>個人事業主</th></tr>
+  <tr><td>申請に添付する書類</td><td>履歴事項全部証明書（発行から3か月以内）<br>法人税の納税証明書（その1またはその2）</td><td>運転免許証などの本人確認書類<br>所得税の納税証明書（その1またはその2）<br>税務署の受付が分かる確定申告書の控え（令和7年分）</td></tr>
+  <tr><td>事業計画の作成に使う資料</td><td colspan="2">直近の決算書（または確定申告書一式）、賃金台帳、従業員名簿、現在お使いのシステムの情報</td></tr>
+</table>
+</div>
+<p class="note">納税証明書は「納付した領収書」ではなく、税務署で発行される「納税証明書」です。小規模事業者に該当する場合は、実績報告の際に従業員一覧の提出も必要になります。</p>
+
+<h2 id="s10">10. よくあるご質問</h2>
+<dl class="faq">
+  <dt>いつ、いくら支払う必要がありますか？</dt>
+  <dd>交付決定の後、ツールの導入費用を全額いったんお支払いいただきます。補助金は実績報告の後に振り込まれるため、それまでの資金のご準備をお願いします。</dd>
+  <dt>すでに契約・購入したツールも対象になりますか？</dt>
+  <dd>通常枠・インボイス枠では、交付決定より前に契約・支払いをしたものは対象外です。例外として、2027年1月から始まるスマートレジ類型・POSレジ類型は、2026年9月15日以降の契約であれば導入後の申請が認められる予定です。</dd>
+  <dt>不採択になった場合はどうなりますか？</dt>
+  <dd>次の締切回に内容を見直して再申請できます。事務局から評価が低かった項目が通知されるため、それを踏まえて改善します。</dd>
+  <dt>パソコンだけ、レジ本体だけの購入にも使えますか？</dt>
+  <dd>ハードウェアのみの申請はできません。会計・決済などのソフトウェアと一緒に導入する場合に限り、補助対象になります。</dd>
+  <dt>従業員がいない会社でも申請できますか？</dt>
+  <dd>申請は可能です。ただし賃上げに関する加点が取りにくく、審査では不利になりやすいため、ご相談の際に見込みを含めてご説明します。</dd>
+</dl>
+
+<footer>
+  本資料は、デジタル化・AI導入補助金2026の公式サイト（<a href="https://it-shien.smrj.go.jp/">it-shien.smrj.go.jp</a>）、通常枠・インボイス枠の公募要領（第7回公募〜、2026年10月9日版）、「スマートレジ類型及びPOSレジ類型の新設について」（2026年10月29日）、事務局公表の交付決定件数（2026年10月7日更新）に基づき、2026年11月6日時点の情報で作成しています。制度内容やスケジュールは今後変更される場合があります。<br>
+  株式会社KMST（香川県三豊市）
+</footer>
+
+</div>
+<script>
+(function () {
+  var cost = document.getElementById('cost');
+  function yen(n) { return n.toLocaleString('ja-JP') + '円'; }
+  function calc() {
+    var e = parseInt(String(cost.value).replace(/[^0-9]/g, ''), 10) || 0;
+    var small = document.querySelector('input[name=size]:checked').value === 'small';
+    var two = document.querySelector('input[name=func]:checked').value === '2';
+    var r = small ? 0.8 : 0.75;
+    var border = 500000 / r;
+    var s = e <= border ? e * r : 500000 + (e - border) * 2 / 3;
+    s = Math.floor(Math.min(s, two ? 3500000 : 500000) + 1e-6);
+    document.getElementById('o-sub').textContent = yen(s);
+    document.getElementById('o-self').textContent = yen(Math.max(e - s, 0));
+    document.getElementById('o-rate').textContent = e ? (s / e * 100).toFixed(1) + '%' : '—';
+  }
+  cost.addEventListener('input', calc);
+  cost.addEventListener('blur', function () {
+    var e = parseInt(String(cost.value).replace(/[^0-9]/g, ''), 10);
+    if (e) cost.value = e.toLocaleString('ja-JP');
+  });
+  document.querySelectorAll('input[type=radio]').forEach(function (el) { el.addEventListener('change', calc); });
+  calc();
+})();
+</script>
+</body>
+</html>
