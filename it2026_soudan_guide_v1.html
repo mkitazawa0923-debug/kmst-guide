@@ -54,6 +54,9 @@
   .calc .out .v { font-size: 20px; font-weight: 700; }
   .calc .out .v.red { color: var(--red); }
   .note { font-size: 12.5px; color: var(--sub); }
+  figure.rel { margin: 16px auto 8px; max-width: 720px; }
+  figure.rel svg { width: 100%; height: auto; display: block; font-family: inherit; }
+  .ref { display: inline-block; color: var(--red); font-weight: 700; margin-right: 4px; }
   dl.faq dt { font-weight: 700; margin-top: 14px; }
   dl.faq dt::before { content: "Q. "; color: var(--red); }
   dl.faq dd { margin: 4px 0 0 0; padding-left: 1.6em; }
@@ -70,7 +73,7 @@
     .page { padding: 16px 8mm; max-width: none; }
     .calc, nav.toc { display: none; }
     h2 { break-after: avoid; }
-    table, .callout, .flow li, .hero { break-inside: avoid; }
+    table, .callout, .flow li, .hero, figure.rel { break-inside: avoid; }
   }
 </style>
 </head>
@@ -88,6 +91,7 @@
   <b>目次</b>
   <ol>
     <li><a href="#s1">ひと目でわかるポイント</a></li>
+    <li><a href="#rel">登場する3者の関係</a></li>
     <li><a href="#s2">対象となる事業者</a></li>
     <li><a href="#s3">申請枠と補助額・補助率</a></li>
     <li><a href="#s4">補助額の目安（ラクリア会計）</a></li>
@@ -110,7 +114,52 @@
   ご注意いただきたい点が2つあります。まず、<b>補助金は後払い</b>です。導入費用をいったん全額お支払いいただき、実績報告が済んだ後に補助金が振り込まれます。次に、<b>交付決定の前に契約・発注・支払いをすると補助の対象外</b>になります。導入は必ず交付決定の通知が届いてから進めてください。
 </div>
 
-<h2 id="s2">2. 対象となる事業者</h2>
+<h2 id="rel">2. 登場する3者の関係</h2>
+<p>この補助金には、お客様・KMST・事務局の3者が関わります。申請者はお客様ご自身で、KMSTは登録された「IT導入支援事業者」として、ツールの提供と申請・報告のサポートを担当します。</p>
+<figure class="rel">
+<svg viewBox="0 0 720 420" role="img" aria-label="お客様・KMST・事務局の関係図">
+  <defs>
+    <marker id="ah" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#5a6270"/></marker>
+    <marker id="ahr" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#b91c1c"/></marker>
+  </defs>
+  <!-- 事務局 -->
+  <rect x="230" y="14" width="260" height="78" rx="10" fill="#f1f3f6" stroke="#9aa1ad" stroke-width="1.5"/>
+  <text x="360" y="48" text-anchor="middle" font-size="20" font-weight="700" fill="#1f2430">事務局</text>
+  <text x="360" y="74" text-anchor="middle" font-size="13" fill="#5a6270">国（中小機構）の補助事業の窓口</text>
+  <!-- お客様 -->
+  <rect x="16" y="300" width="230" height="100" rx="10" fill="#fdf6f6" stroke="#b91c1c" stroke-width="2.5"/>
+  <text x="131" y="342" text-anchor="middle" font-size="21" font-weight="700" fill="#b91c1c">お客様</text>
+  <text x="131" y="370" text-anchor="middle" font-size="13.5" fill="#1f2430">補助事業者（申請者）</text>
+  <!-- KMST -->
+  <rect x="474" y="300" width="230" height="100" rx="10" fill="#fff" stroke="#1f2430" stroke-width="1.5"/>
+  <text x="589" y="342" text-anchor="middle" font-size="21" font-weight="700" fill="#1f2430">KMST</text>
+  <text x="589" y="370" text-anchor="middle" font-size="13.5" fill="#1f2430">IT導入支援事業者</text>
+  <!-- お客様 → 事務局 -->
+  <line x1="96" y1="296" x2="248" y2="98" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#ahr)"/>
+  <text x="40" y="186" font-size="14" font-weight="700" fill="#b91c1c">① 交付申請</text>
+  <text x="40" y="208" font-size="14" font-weight="700" fill="#b91c1c">⑤ 実績報告</text>
+  <!-- 事務局 → お客様 -->
+  <line x1="290" y1="98" x2="160" y2="296" stroke="#b91c1c" stroke-width="2.5" marker-end="url(#ahr)"/>
+  <text x="240" y="196" font-size="14" font-weight="700" fill="#b91c1c">② 交付決定</text>
+  <text x="240" y="218" font-size="14" font-weight="700" fill="#b91c1c">⑥ 補助金の振込</text>
+  <!-- KMST → 事務局 -->
+  <line x1="600" y1="296" x2="462" y2="98" stroke="#5a6270" stroke-width="2" stroke-dasharray="6 4" marker-end="url(#ah)"/>
+  <text x="560" y="186" font-size="13.5" fill="#3a4150">ITツールの登録</text>
+  <text x="560" y="207" font-size="13.5" fill="#3a4150">申請内容の入力</text>
+  <!-- お客様 → KMST -->
+  <line x1="252" y1="330" x2="468" y2="330" stroke="#1f2430" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="360" y="320" text-anchor="middle" font-size="13" fill="#1f2430">③ 契約・④ 代金のお支払い</text>
+  <!-- KMST → お客様 -->
+  <line x1="468" y1="372" x2="252" y2="372" stroke="#1f2430" stroke-width="2" marker-end="url(#ah)"/>
+  <text x="360" y="394" text-anchor="middle" font-size="13" fill="#1f2430">ツール提供・申請と報告のサポート</text>
+</svg>
+</figure>
+<p class="note" style="text-align:center;margin-top:-4px">番号は「10. 申請から入金までの流れ」の順番と対応しています。</p>
+<div class="callout">
+  ポイントは3つです。1つ目に、<b>申請者はお客様ご本人</b>です。申請書の作成と入力はKMSTが行いますが、最後の確認と提出はお客様の操作になります。2つ目に、<b>ツールの代金はKMSTへ、補助金は事務局からお客様の口座へ直接</b>振り込まれます。3つ目に、補助の対象になるのは<b>事務局に登録された支援事業者（KMST）を通じて購入したツールだけ</b>で、家電量販店やネットで直接購入したものは対象になりません。
+</div>
+
+<h2 id="s2">3. 対象となる事業者</h2>
 <p>日本国内で事業を営む中小企業・小規模事業者（個人事業主を含む）が対象です。業種ごとに、資本金と従業員数のどちらか一方が下の表の基準以下であれば対象になります。</p>
 <div class="table-wrap">
 <table>
@@ -126,7 +175,7 @@
 </div>
 <p>このうち、常時使用する従業員が<b>商業・サービス業で5人以下</b>（宿泊業・娯楽業は20人以下）、<b>製造業その他で20人以下</b>の事業者は「小規模事業者」となり、インボイス枠などで補助率が上乗せされます。</p>
 
-<h2 id="s3">3. 申請枠と補助額・補助率</h2>
+<h2 id="s3">4. 申請枠と補助額・補助率</h2>
 <p>導入するツールの種類によって申請する枠が分かれます。会計ソフト・受発注システム・キャッシュレス決済・レジを導入する場合は、補助率が最も高い<b>インボイス枠（インボイス対応類型）</b>が中心になります。</p>
 <div class="table-wrap">
 <table>
@@ -163,7 +212,7 @@
   <b>2027年1月から「スマートレジ類型」「POSレジ類型」が新設されます。</b>2027年4月に予定されている飲食料品の消費税率引下げに備えてレジを導入・改修する事業者向けの類型で、2026年9月15日以降に契約したレジの導入・改修費用を、<b>支払いが終わった後にさかのぼって申請</b>できる点が大きな特徴です。補助率・上限額はインボイス枠と同じ水準で、申請受付は2027年1月中旬以降に始まる予定です。詳しい公募要領は今後公開されます。
 </div>
 
-<h2 id="s4">4. 補助額の目安（ラクリア会計の4プラン）</h2>
+<h2 id="s4">5. 補助額の目安（ラクリア会計の4プラン）</h2>
 <p>弊社では、インボイス枠で申請できるツールとして<b>「ラクリア会計」</b>をご提案しています。顧客管理、見積書・請求書・発注書の作成、支払管理、仕訳入力から決算書（3表）の作成、在庫管理までを1つの仕組みで扱えるクラウドサービスで、補助上限350万円の区分で申請します。</p>
 <p>プランごとの補助額と実質のご負担は次のとおりです。補助率は「補助額のうち50万円まで」と「50万円を超える部分」で変わるため、費用が大きくなるほど全体の補助率は2/3に近づきます。</p>
 <div class="table-wrap">
@@ -194,7 +243,7 @@
   <p class="note" style="margin-top:10px">ソフトウェア・役務分の目安です（ハードウェアは別枠で1/2）。1円未満は切り捨てています。実際の補助額は交付決定時に確定します。</p>
 </div>
 
-<h2 id="s5">5. 採択の状況と審査のポイント</h2>
+<h2 id="s5">6. 採択の状況と審査のポイント</h2>
 <p>申請すれば必ず受け取れる補助金ではなく、審査があります。今年度の公表結果は次のとおりで、インボイス枠でも<b>申請の半分以上が不採択</b>になっています。</p>
 <div class="table-wrap">
 <table>
@@ -214,7 +263,7 @@
 </ul>
 <p class="note">反対に、IT導入補助金2022〜2025で交付決定を受けたことがある場合は減点となり、過去と同じ機能のツールを導入する場合は不採択になることがあります。過去の受給歴はご相談の段階でお知らせください。</p>
 
-<h2 id="s6">6. 申請の条件とお約束いただくこと</h2>
+<h2 id="s6">7. 申請の条件とお約束いただくこと</h2>
 <h3>すべての申請者に必要な条件</h3>
 <ul>
   <li>「GビズIDプライム」のアカウントを取得していること（発行までおおむね2週間）</li>
@@ -226,7 +275,7 @@
 <p>IT導入補助金2022〜2025で交付決定を受けたことがある事業者は、インボイス枠でも「1人当たり給与支給総額を年平均3.5%以上引き上げる3年間の計画」を立てることが申請の条件になります。通常枠の場合は、労働生産性を年3%以上向上させる計画が全員に必要で、補助額150万円以上では給与の引き上げ計画も必須です。これらの賃上げ計画が達成できなかった場合は、補助金の一部または全部の返還を求められることがあります。</p>
 <p>また、補助を受けた後は3年間、毎年「効果報告」として売上や人件費、賃金の状況を事務局へ報告していただきます。報告は弊社がサポートします。</p>
 
-<h2 id="s7">7. スケジュール</h2>
+<h2 id="s7">8. スケジュール</h2>
 <div class="table-wrap">
 <table>
   <tr><th>項目</th><th>第7次締切分（通常枠・インボイス枠・セキュリティ枠）</th></tr>
@@ -239,21 +288,21 @@
   12月1日の締切に間に合わせるには、<b>GビズIDプライムの申請を11月中旬までに済ませる</b>必要があります（発行まで約2週間）。まだお持ちでない場合は、ご相談当日の申請をおすすめします。なお、事務局からは通常枠・インボイス枠などの交付申請期限を2027年1月7日（木）17:00とする案内が出ており、今年度に申請できる機会は残りわずかです（スマートレジ類型・POSレジ類型は別スケジュールです）。
 </div>
 
-<h2 id="s8">8. 申請から入金までの流れ</h2>
+<h2 id="s8">9. 申請から入金までの流れ</h2>
 <ol class="flow">
   <li>ご相談・導入ツールの選定<span class="who kmst">KMST</span><br><span class="note">課題をお伺いし、ラクリア会計のプランと補助額の見込みをご提案します。</span></li>
   <li>GビズIDプライム取得・SECURITY ACTION宣言<span class="who you">お客様</span><br><span class="note">手順は弊社がご案内します。</span></li>
   <li>必要書類のご提出・ヒアリング<span class="who you">お客様</span><br><span class="note">決算書や納税証明書などをお預かりし、事業計画に必要な数値を確認します。</span></li>
   <li>申請書類の作成・入力<span class="who kmst">KMST</span><br><span class="note">事業計画や数値計画を弊社で作成し、申請マイページへ入力します。</span></li>
-  <li>内容のご確認・宣誓・提出<span class="who you">お客様</span><br><span class="note">最後の確認と提出ボタンは、お客様ご自身の操作になります。</span></li>
-  <li>審査・交付決定<span class="who jim">事務局</span><br><span class="note">締切からおよそ1〜2か月後に結果が通知されます。</span></li>
-  <li>契約・導入・お支払い<span class="who you">お客様</span><br><span class="note">交付決定の後に契約し、費用を全額お支払いいただきます（銀行振込が原則）。</span></li>
-  <li>実績報告<span class="who kmst">KMST</span><span class="who you">お客様</span><br><span class="note">支払いの証拠書類などを提出します。報告書類の準備は弊社がサポートします。</span></li>
-  <li>補助金の入金<span class="who jim">事務局</span><br><span class="note">報告内容が確定した後、指定口座へ振り込まれます。</span></li>
+  <li><span class="ref">①</span>内容のご確認・宣誓・提出（交付申請）<span class="who you">お客様</span><br><span class="note">最後の確認と提出ボタンは、お客様ご自身の操作になります。</span></li>
+  <li><span class="ref">②</span>審査・交付決定<span class="who jim">事務局</span><br><span class="note">締切からおよそ1〜2か月後に結果が通知されます。</span></li>
+  <li><span class="ref">③④</span>契約・導入・お支払い<span class="who you">お客様</span><br><span class="note">交付決定の後に契約し、費用を全額お支払いいただきます（銀行振込が原則）。</span></li>
+  <li><span class="ref">⑤</span>実績報告<span class="who kmst">KMST</span><span class="who you">お客様</span><br><span class="note">支払いの証拠書類などを提出します。報告書類の準備は弊社がサポートします。</span></li>
+  <li><span class="ref">⑥</span>補助金の入金<span class="who jim">事務局</span><br><span class="note">報告内容が確定した後、指定口座へ振り込まれます。</span></li>
   <li>効果報告（3年間）<span class="who kmst">KMST</span><span class="who you">お客様</span></li>
 </ol>
 
-<h2 id="s9">9. ご準備いただくもの</h2>
+<h2 id="s9">10. ご準備いただくもの</h2>
 <div class="table-wrap">
 <table>
   <tr><th></th><th>法人</th><th>個人事業主</th></tr>
@@ -263,7 +312,7 @@
 </div>
 <p class="note">納税証明書は「納付した領収書」ではなく、税務署で発行される「納税証明書」です。小規模事業者に該当する場合は、実績報告の際に従業員一覧の提出も必要になります。</p>
 
-<h2 id="s10">10. よくあるご質問</h2>
+<h2 id="s10">11. よくあるご質問</h2>
 <dl class="faq">
   <dt>いつ、いくら支払う必要がありますか？</dt>
   <dd>交付決定の後、ツールの導入費用を全額いったんお支払いいただきます。補助金は実績報告の後に振り込まれるため、それまでの資金のご準備をお願いします。</dd>
